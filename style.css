@@ -55,11 +55,9 @@ body{
     background-color: var(--clr-secondary-200);
     /* for this project only */
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* display: grid;
-    place-items: center; */
+    display: grid;
+    place-items: center;
+    
     margin: 1rem;
 }
 
@@ -111,11 +109,18 @@ body{
     --content-padding: 1.5rem;
     --content-spacing: 0.5rem;
 
+    display: grid;
     background-color: var(--clr-neutal-100);
     border-radius:0.5rem ;
     overflow: hidden;
+    max-width: 600px;
 }
-
+@media (min-width: 600px){
+    .product{
+        --content-padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 .product__content{
     display: flex;
     flex-direction: column;
